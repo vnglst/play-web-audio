@@ -37,12 +37,10 @@ class BufferLoader {
               this.onload(this.bufferList)
             }
           },
-          error => {
-            console.error('decodeAudioData error', error)
-          }
+          error => console.error('decodeAudioData error', error)
         )
       })
-      .catch(error => console.error('BufferLoader: XHR error'))
+      .catch(error => console.error('BufferLoader: XHR error', error))
   }
 }
 
