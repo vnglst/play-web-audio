@@ -5,11 +5,12 @@ import { playAudio, loadAudioUrls } from 'play-web-audio'
 class App extends Component {
   constructor(props) {
     super(props)
-    const soundUrls = ['./sounds/squakk.mp3', './sounds/nock.mp3']
-    loadAudioUrls(soundUrls, bufferList => {
+    this.soundUrls = ['./sounds/squakk.mp3', './sounds/nock.mp3']
+    loadAudioUrls(this.soundUrls, bufferList => {
       this.squakk = bufferList[0]
       this.nock = bufferList[1]
     })
+    this.audio = new Audio()
   }
 
   playSquakk() {
@@ -43,6 +44,25 @@ class App extends Component {
           }}
         >
           Nock
+        </button>
+        <p className="App-intro">
+          Old audio HTML5 tag implementation. It's..... slow on Safari Mobile.
+        </p>
+        <button
+          onClick={() => {
+            this.audio.src = this.soundUrls[0]
+            this.audio.play()
+          }}
+        >
+          Squakk using audio HTML5 tag
+        </button>
+        <button
+          onClick={() => {
+            this.audio.src = this.soundUrls[1]
+            this.audio.play()
+          }}
+        >
+          Nock using audio HTML5 tag
         </button>
       </div>
     )
