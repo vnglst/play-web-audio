@@ -1,7 +1,7 @@
 {
   "name": "play-web-audio",
   "version": "1.0.1",
-  "description": "No zooming on mobile when user double taps on a button/screen.",
+  "description": "Play sounds using the web audio API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
