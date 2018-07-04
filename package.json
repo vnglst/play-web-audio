@@ -1,6 +1,6 @@
 {
   "name": "play-web-audio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "No zooming on mobile when user double taps on a button/screen.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
