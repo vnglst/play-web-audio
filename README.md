@@ -20,7 +20,7 @@ loadAudioUrls(this.soundUrls, bufferList => {
 
 playAudio(squakk) // plays the audio file
 /*
-    N.B. on many device autoplay is not allowed, then this must be initiated by a user interaction, like a mouse click or finger tap.
+    N.B. on many devices autoplay is not allowed. In that case the play function must be initiated by a user interaction, i.e. a mouse click or finger tap.
 
 */
 ```
